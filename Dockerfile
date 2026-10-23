@@ -1,6 +1,6 @@
 FROM golang:1.26 AS build
 WORKDIR /src
-COPY go.mod main.go ./
+COPY go.mod main.go orders.go ./
 RUN CGO_ENABLED=0 go build -trimpath -o /out/server .
 
 FROM scratch
